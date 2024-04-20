@@ -1,20 +1,13 @@
-# WiFi softAP example
+# WiFi APSTA example
 
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
 
+a wifi apsta example，connect to a router, and share net by ap.
 
 ## How to use example
 
-### Configure the project
-
-```
-idf.py menuconfig
-```
-
-* Set WiFi SSID and WiFi Password and Maximal STA connections under Example Configuration Options.
-
 ### Build and Flash
 
+use ESP-IDF-4.3.4
 Build the project and flash it to the board, then run monitor tool to view serial output:
 
 ```
@@ -24,6 +17,24 @@ idf.py -p PORT flash monitor
 (To exit the serial monitor, type ``Ctrl-]``.)
 
 See the Getting Started Guide for full steps to configure and use ESP-IDF to build projects.
+
+
+
+### Use console
+
+usart console provide cmd to set ap and sta info
+
+example:
+
+```
+ap [-m <mac addr>] [-s <ssid>] [-p <password>]
+```
+
+```
+sta [-s <ssid>] [-p <password>]
+```
+
+
 
 ## Example Output
 
